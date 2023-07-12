@@ -1,0 +1,34 @@
+Proyecto practico
+
+Usando ViteJS para crear proyecto (opcion nueva y popular (antes se usó Create React App))
+Comando nmp create vite y colocar titulo de carpeta proyecto (no hay que instalar/descargar nada)
+Hacer cd nueva carpeta y npm install
+Ejecutar nmp run dev (equivalente a npm start)
+
+Creacion de TaskList que muestra html a partir de lista en tasks.js
+Creacion de TaskForm para agregar task a array tasks (Aqui se saca tasks de TaskList y se pasa a App para que ambas puedan interactuar con el array)
+Idea de no modificar el tasks en App desde TaskForms por ej, sino crear funcion que modifica al
+array en App y pasar como argumento a TaskForm (JS permite usar funcion como objeto) Se puede tocar objeto solo desde App
+
+Separación componentes en subcomponentes: Sacar componente de TaskList y crear fuera como TaskCard
+Creacion de subcarpetas dentro de src para mantener orden (folder components) OJO con los import
+Refrescar input luego de submit, actualizar title y description con setTitle() y agregar value = {title} en <input>
+
+Como eliminar una tarea: Misma idea de crear funcione en App.js para modificar tasks y pasar esa funcion como objeto hasta TaskCard para ejecutar en onClick
+Uso de funcion filter para eliminar item de array (recorre el array y deja los que cumplen condicion)
+
+PropDrilling: La tecnica usada hasta el momento para pasar funcion como objeto hasta componente que la ejecuta
+En proyectos grandes es inmantenible
+Creacion por parte de React de CONTEXTO
+Es un contenedor de todo, donde si se permite que componentes interacciones directamente (se invierte la flecha)
+Se agrega en main.jsx conteniendo <App>
+Usar  useContext(TaskContext) ademas de los import para conectar con contexto e interactuar con datos
+
+Tailwind CSS: Framework para estilizar
+Seguir instrucciones en sitio web, con Vite. Instalar extension de TailWind IntelliSense para auto completado
+La idea es poder colocar propiedades css en className de <tags>
+
+Deploy a GitHub
+Build con npm run build
+Crear repositorio para proyecto en GitHub
+Ejecutar comando git init, git add . y git commit en cmd
